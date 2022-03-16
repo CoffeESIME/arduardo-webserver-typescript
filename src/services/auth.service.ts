@@ -29,12 +29,15 @@ export class AuthService {
     };
     
     public static getCurrentUser() {
-        if(localStorage.getItem("user")){
-            return JSON.parse(localStorage.getItem("user") || '');
-        }
-        else{
-            return {};
-        }
+        const userStr =localStorage.getItem("user");
+        if(userStr) return JSON.parse(userStr)
+        return null
+        // if(localStorage.getItem("user")){
+        //     return JSON.parse(localStorage.getItem("user") || '');
+        // }
+        // else{
+        //     return {};
+        // }
     };
 
 }

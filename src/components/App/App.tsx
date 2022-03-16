@@ -14,7 +14,7 @@ function App() {
     <div className="bg-slate-900 w-screen h-screen">
       <BrowserRouter >
         <Header />
-        <div className="flex flex-row h-5/6">
+        <div className="flex flex-row">
         <NavBar logOut={AuthService.logOut} ></NavBar>
         <Routes>
           <Route
